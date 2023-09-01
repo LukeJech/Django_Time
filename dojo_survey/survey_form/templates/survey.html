@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/survey_submit" method="post">
+        {% csrf_token %}
+        <label for="name">
+            <input type="text" name="name" placeholder="Your Name">
+        </label>
+        <label for="dojo_location">
+            <select name="dojo_location" id="">
+                <option value="seattle">Seattle</option>
+                <option value="webs">In da inter Webs</option>
+            </select>
+        </label>
+        <label for="language">
+            <select name="language" id="">
+                <option value="python">Python</option>
+                <option value="Java">Java Mate</option>
+            </select>
+        </label>
+        <label for="comment">
+            <textarea name="comment" id="" cols="30" rows="10">Write me somethign plz</textarea>
+        </label>
+        <input type="submit" value="Click me when doneee">
+    </form>
+</body>
+</html>
